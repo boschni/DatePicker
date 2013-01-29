@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>DatePicker</title>
+</head>
+<body>
+	<h1>DatePicker</h1>
+	<h2>Default</h2>
+	<div class="datepicker" data-component="DatePicker">
+		<input class="datepicker-textfield" type="text" placeholder="DD-MM-YYYY" />
+	</div>
+	<h2>With selected date (march 21th, 2016)</h2>
+	<div class="datepicker" data-component="DatePicker">
+		<input class="datepicker-textfield" type="text" placeholder="DD-MM-YYYY" value="21-03-2016" />
+	</div>
+	<h2>With different textfield format</h2>
+	<div class="datepicker" data-component="DatePicker" data-textfield-format="D MMMM YYYY">
+		<input class="datepicker-textfield" type="text" placeholder="D MMMM YYYY" />
+	</div>
+	<h2>With start date (april 10th, 2013)</h2>
+	<div class="datepicker" data-component="DatePicker" data-start-date="10-04-2013">
+		<input class="datepicker-textfield" type="text" placeholder="DD-MM-YYYY" />
+	</div>
+	<h2>With end date (may 20th, 2014)</h2>
+	<div class="datepicker" data-component="DatePicker" data-end-date="20-05-2014">
+		<input class="datepicker-textfield" type="text" placeholder="DD-MM-YYYY" />
+	</div>
+	<h2>With start date (april 1st, 2013) and end date (may 31th, 2014)</h2>
+	<div class="datepicker" data-component="DatePicker" data-start-date="01-04-2013" data-end-date="31-05-2014">
+		<input class="datepicker-textfield" type="text" placeholder="DD-MM-YYYY" />
+	</div>
+	<h2>Disable saturdays</h2>
+	<div class="datepicker" data-component="DatePicker" data-disable-saturdays="true">
+		<input class="datepicker-textfield" type="text" placeholder="DD-MM-YYYY" />
+	</div>
+	<h2>Disable sundays</h2>
+	<div class="datepicker" data-component="DatePicker" data-disable-sundays="true">
+		<input class="datepicker-textfield" type="text" placeholder="DD-MM-YYYY" />
+	</div>
+	<h2>Disable weekends</h2>
+	<div class="datepicker" data-component="DatePicker" data-disable-weekends="true">
+		<input class="datepicker-textfield" type="text" placeholder="DD-MM-YYYY" />
+	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/moment.js"></script>
+	<script type="text/javascript" src="js/DatePicker.js"></script>
+	<script type="text/javascript">
+		$('[data-component="DatePicker"]').each(function () {
+			new DatePicker(this);
+		});
+	</script>
+</body>
+</html>
